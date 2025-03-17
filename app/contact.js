@@ -39,7 +39,7 @@ function ContactUs() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">About Us</h2>
           <div className="text-center">
             <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Founded on the principles of <strong>innovation</strong> and <strong>excellence</strong>, Koch Media Agency was created to bridge the gap between advanced technology and effective marketing. We understand that in today’s digital landscape, success requires a unified approach. That's why we integrate digital marketing with <strong>cybersecurity</strong>, <strong>web development</strong>, and <strong>software solutions</strong> under one roof.
+              Founded on the principles of <strong>innovation</strong> and <strong>excellence</strong>, Koch Media Agency was created to bridge the gap between advanced technology and effective marketing. We understand that in today&apos;s digital landscape, success requires a unified approach. Th&apos;s why we integrate digital marketing with <strong>cybersecurity</strong>, <strong>web development</strong>, and <strong>software solutions</strong> under one roof.
               <br />
               <span className="mt-4 block">Our team of experts is dedicated to delivering tailored strategies that drive growth, enhance brand visibility, and ensure long-term success. By combining cutting-edge tools with creative thinking, we empower businesses to thrive in an ever-evolving digital world. Whether you're a startup or an established enterprise, we provide the expertise and resources to help you achieve your goals.</span>
             </p>
