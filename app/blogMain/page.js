@@ -35,7 +35,7 @@ export default function ComingSoon() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             >
-              We're working hard to bring you something amazing. Stay tuned!
+              We&apos;re working hard to bring you something amazing. Stay tuned!
             </motion.p>
 
             {/* Animated Dots */}
