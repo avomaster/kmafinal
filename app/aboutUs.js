@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import { FaChartLine, FaCode, FaLaptopCode } from 'react-icons/fa';
 
+import Image from "next/image";
+
 const services = [
   { 
     title: 'Digital Marketing', 
@@ -26,7 +28,7 @@ function AboutUs() {
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Image on the left */}
         <div className="md:w-1/3 mb-8 md:mb-0 md:mr-8">
-          <img
+          <Image
             src="/about.svg" 
             alt="About Us"
             className="rounded-lg shadow-lg"
