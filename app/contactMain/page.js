@@ -56,7 +56,7 @@ const ContactForm = () => {
                         Get in Touch
                     </motion.h2>
                     <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                        Have a project in mind? Need help with your brand? Drop us a message and let's talk!
+                        Have a project in mind? Need help with your brand? Drop us a message and lets talk!
                     </p>
 
                     {/* Contact Form & Details Section */}
