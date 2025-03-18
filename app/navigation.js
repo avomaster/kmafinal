@@ -73,7 +73,7 @@ function Navigation() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="md:hidden p-2 text-white rounded-lg hover:bg-gray-100 transition-all"
+          className="md:hidden p-2 text-white rounded-lg transition-all"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
