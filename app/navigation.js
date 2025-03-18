@@ -92,7 +92,7 @@ function Navigation() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden absolute w-full bg-white/95 backdrop-blur-lg border-b border-gray-200/30"
+            className="md:hidden absolute w-full bg-black backdrop-blur-lg border-b border-white/80"
           >
             <div className="container mx-auto px-6 py-6 space-y-4">
               {navItems.map((item) => (
