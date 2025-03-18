@@ -62,21 +62,21 @@ export default function AboutUSMain() {
           </motion.h2>
 
           {/* Centered Timeline */}
-          <div className="flex overflow-x-scroll pb-10 mb-20 hide-scrollbar justify-center">
-            <div className="flex mt-6 gap-6 px-4">
-              {timeline.map((item, idx) => (
-                <motion.div 
-                  key={item.year}
-                  whileHover={{ scale: 1.05 }}
-                  className="flex-shrink-0 w-80 h-48 bg-black rounded-xl p-6 cursor-pointer border border-gray-800 hover:border-white"
-                >
-                  <div className="text-white text-2xl font-bold mb-2">{item.year}</div>
-                  <div className="text-gray-400 text-lg">{item.event}</div>
-                  <div className="text-gray-600 text-4xl mt-4">0{idx + 1}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+<div className="flex pb-10 mb-20 hide-scrollbar justify-center">
+  <div className="flex flex-col md:flex-row mt-6 gap-6 px-4">
+    {timeline.map((item, idx) => (
+      <motion.div 
+        key={item.year}
+        whileHover={{ scale: 1.05 }}
+        className="flex-shrink-0 w-80 h-48 bg-black rounded-xl p-6 cursor-pointer border border-gray-800 hover:border-white"
+      >
+        <div className="text-white text-2xl font-bold mb-2">{item.year}</div>
+        <div className="text-gray-400 text-lg">{item.event}</div>
+        <div className="text-gray-600 text-4xl mt-4">0{idx + 1}</div>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
           {/* Content Grid with Team Members */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
