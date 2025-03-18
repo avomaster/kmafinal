@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from "next/link";
 import { FiChevronRight } from 'react-icons/fi';
 import { useState } from 'react';
 
@@ -9,12 +10,12 @@ function Hero() {
   return (
     <section className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden flex flex-col lg:flex-row items-center">
       {/* Left Side (Text and Button) */}
-      <div className="w-full lg:w-1/2 relative z-10 flex flex-col justify-center items-start mb-8 lg:mb-0">
+      <div className="w-full lg:w-1/2 relative z-10 flex flex-col justify-center text-center mb-8 lg:mb-0">
         {/* Heading (small and light gray) */}
         <h1 className="text-xl text-gray-400">A Digital Design & Innovation Agency</h1>
 
         {/* Middle Text (dark, big, not bold) */}
-        <p className="mt-6 text-6xl text-white font-normal">
+        <p className="mt-6 text-5xl md:text-6xl text-white font-normal">
           <span className="block">Digital Transformation</span>
           <span className="block">That Impacts EBIT</span>
           <span className="block"> Within 180 Days.</span>
@@ -31,12 +32,14 @@ function Hero() {
 
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="mt-6"
+          className="mt-6 w-full flex justify-center"
         >
-          <button className="bg-gradient-to-r bg-[#3c3c3c] px-8 py-4 rounded-full text-lg font-semibold flex items-center text-white">
-            Start Your Journey
-            <FiChevronRight className="ml-2" />
-          </button>
+          <Link href="/servicesMain">
+            <button className="bg-gradient-to-r bg-[#3c3c3c] px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 text-white">
+              <span>Start Your Journey</span>
+              <FiChevronRight className="w-5 h-5" />
+            </button>
+          </Link>
         </motion.div>
       </div>
 

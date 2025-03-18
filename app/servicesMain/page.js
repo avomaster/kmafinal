@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FiCode, FiMonitor, FiTrendingUp } from 'react-icons/fi';
+import Link from "next/link";
 import Navigation from '../navigation';
 import Testimonials from '../Testimonials';
 import Footer from '../Footer';
@@ -100,6 +101,7 @@ export default function OurServices() {
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto relative z-10">
               Schedule a confidential strategy session with our executive team
             </p>
+            <Link href="/contactMain">
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -107,6 +109,7 @@ export default function OurServices() {
             >
               Initiate Executive Briefing
             </motion.button>
+            </Link>
           </motion.div>
         </div>
 
