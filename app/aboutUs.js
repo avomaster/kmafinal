@@ -31,6 +31,8 @@ function AboutUs() {
           <Image
             src="/about.svg" 
             alt="About Us"
+            width={400}
+            height={300}
             className="rounded-lg shadow-lg"
           />
         </div>

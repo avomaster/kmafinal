@@ -1,11 +1,46 @@
 "use client";
 
+import { useState } from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { createClient } from "@supabase/supabase-js";
 import Navigation from "../navigation";
 import Footer from "../Footer";
 
-export default function Contact() {
+// Initialize Supabase client
+const supabase = createClient(
+    "https://aktoexljifderseboczn.supabase.co", 
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrdG9leGxqaWZkZXJzZWJvY3puIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzMDg4NTEsImV4cCI6MjA1Nzg4NDg1MX0.FKPGCnAg-Ipflij2u6ajf0g1173uVjsCybj7V-uyfrI"
+)
+
+const ContactForm = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const { data, error } = await supabase
+                .from("contact")
+                .insert([formData]);
+
+            if (error) throw error;
+
+            alert("Message sent successfully!");
+            setFormData({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send message");
+        }
+    };
     return (
         <>
             <Navigation />
@@ -21,7 +56,7 @@ export default function Contact() {
                         Get in Touch
                     </motion.h2>
                     <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                        Have a project in mind? Need help with your brand? Drop us a message and let&apos;s talk!
+                        Have a project in mind? Need help with your brand? Drop us a message and let's talk!
                     </p>
 
                     {/* Contact Form & Details Section */}
@@ -35,26 +70,42 @@ export default function Contact() {
                             transition={{ duration: 0.5 }}
                         >
                             <h3 className="text-2xl font-semibold text-black">Send Us a Message</h3>
-                            <form className="mt-6 space-y-4">
+                            <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                                 <input
                                     type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     placeholder="Your Name"
                                     className="w-full p-3 rounded-lg bg-white border-2 border-gray-200 text-black focus:outline-none focus:border-black"
+                                    required
                                 />
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="Your Email"
                                     className="w-full p-3 rounded-lg bg-white border-2 border-gray-200 text-black focus:outline-none focus:border-black"
+                                    required
                                 />
                                 <input
                                     type="text"
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
                                     placeholder="Subject"
                                     className="w-full p-3 rounded-lg bg-white border-2 border-gray-200 text-black focus:outline-none focus:border-black"
+                                    required
                                 />
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Your Message"
                                     rows="5"
                                     className="w-full p-3 rounded-lg bg-white border-2 border-gray-200 text-black focus:outline-none focus:border-black"
+                                    required
                                 />
                                 <button
                                     type="submit"
@@ -123,3 +174,5 @@ export default function Contact() {
         </>
     );
 }
+
+export default ContactForm;
