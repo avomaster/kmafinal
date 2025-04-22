@@ -1,14 +1,15 @@
+// app/Footer.js
 "use client";
 
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-12 mt-16">
+    <footer className="bg-black text-gray-400 py-16">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-          {/* Left Section - Company Info */}
+          {/* Left Section */}
           <div>
             <h2 className="text-2xl font-bold text-white">Koch Media Agency</h2>
             <p className="mt-4 text-gray-500">
@@ -16,20 +17,28 @@ function Footer() {
             </p>
           </div>
 
-          {/* Middle Section - Navigation Links */}
+          {/* Quick Links */}
           <div>
             <h2 className="text-xl font-semibold text-white">Quick Links</h2>
             <ul className="mt-4 space-y-2">
-              <li><Link href="/homeMain" className="hover:text-[#595959] transition ">Home</Link></li>
-              <li><Link href="/aboutUsMan" className="hover:text-[#595959] transition">About Us</Link></li>
-              <li><Link href="/servicesMain" className="hover:text-[#595959] transition">Services</Link></li>
-              <li><Link href="/contactMain" className="hover:text-[#595959] transition">Contact Us</Link></li>
-              <li><Link href="/workMain" className="hover:text-[#595959] transition">Work</Link></li>
-              <li><Link href="/blogMain" className="hover:text-[#595959] transition">Blog</Link></li>
+              {[
+                { href: "/homeMain", label: "Home" },
+                { href: "/aboutUsMan", label: "About Us" },
+                { href: "/servicesMain", label: "Services" },
+                { href: "/contactMain", label: "Contact Us" },
+                { href: "/workMain", label: "Work" },
+                { href: "/blogMain", label: "Blog" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-[#595959] transition">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Right Section - Social Media & Newsletter */}
+          {/* Social & Newsletter */}
           <div>
             <h2 className="text-xl font-semibold text-white">Follow Us</h2>
             <div className="flex justify-center md:justify-start space-x-6 mt-4">
@@ -44,7 +53,6 @@ function Footer() {
               </a>
             </div>
 
-            {/* Newsletter Subscription */}
             <h2 className="text-xl font-semibold text-white mt-6">Subscribe to Our Newsletter</h2>
             <div className="mt-4 flex flex-col md:flex-row items-center">
               <input
@@ -59,7 +67,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section - Copyright */}
+        {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500">
           <p>© {new Date().getFullYear()} Koch Media Agency. All rights reserved.</p>
         </div>

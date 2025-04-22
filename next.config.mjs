@@ -1,10 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    experimental: {
-      appDir: true,
-      turbopack: false, // disabling Turbopack so that Webpack is used
-    },
-  };
-  
-  export default nextConfig;
-  
+ // next.config.mjs
+
+ /** @type {import('next').NextConfig} */
+ const nextConfig = {
+  reactStrictMode: true,
+  // …your other options…
+};
+
+export default nextConfig;
