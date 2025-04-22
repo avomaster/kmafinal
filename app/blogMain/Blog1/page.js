@@ -33,32 +33,17 @@ export default function BlogAI2025() {
       {/* JSON‑LD for SEO */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "AI‑Powered Marketing in 2025: How Generative AI is Revolutionizing Content & Ads",
-          "author": {
-            "@type": "Person",
-            "name": "Your Name",
-            "url": "https://kochmedia.com/author/your-name"
+          "@context":"https://schema.org",
+          "@type":"Article",
+          "headline":"AI‑Powered Marketing in 2025: How Generative AI is Revolutionizing Content & Ads",
+          "author":{ "@type":"Person","name":"Your Name","url":"https://kochmedia.com/author/your-name" },
+          "publisher":{
+            "@type":"Organization","name":"Koch Media Agency",
+            "logo":{ "@type":"ImageObject","url":"https://kochmedia.com/logo-black.png","width":600,"height":60 }
           },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Koch Media Agency",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://kochmedia.com/logo-black.png",
-              "width": 600,
-              "height": 60
-            }
-          },
-          "datePublished": "2025-04-22",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://kochmedia.com/headerpic.avif",
-            "width": 1200,
-            "height": 630
-          },
-          "description": "Comprehensive analysis of generative AI's impact on marketing strategies in 2025 with actionable insights from industry experts."
+          "datePublished":"2025-04-21",
+          "image":{ "@type":"ImageObject","url":"https://kochmedia.com/headerpic.avif","width":1200,"height":630 },
+          "description":"Comprehensive analysis of generative AI's impact on marketing strategies in 2025 with actionable insights from industry experts."
         })}
       </script>
 
@@ -73,13 +58,8 @@ export default function BlogAI2025() {
               ✕
             </button>
             <h3 className="text-2xl font-bold mb-4">Want Our AI Marketing Checklist?</h3>
-            <p className="mb-6">
-              Get our free 10‑step guide to implementing AI in your marketing strategy.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition"
-            >
+            <p className="mb-6">Get our free 10‑step guide to implementing AI in your marketing strategy.</p>
+            <Link href="/contact" className="inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
               Download Now
             </Link>
           </div>
@@ -100,7 +80,7 @@ export default function BlogAI2025() {
               AI‑Powered Marketing in 2025: How Generative AI is Revolutionizing Content & Ads
             </h1>
             <div className="flex items-center text-gray-400 space-x-4 mb-8">
-              <time dateTime="2025-04-21">April 22, 2025</time>
+              <time dateTime="2025-04-21">April 21, 2025</time>
               <span>•</span>
               <span>8 min read</span>
             </div>
@@ -169,9 +149,7 @@ export default function BlogAI2025() {
 
           {/* Section 3 */}
           <section id="ads-personalization" className="mb-16 space-y-4">
-            <h2 className="text-2xl font-semibold">
-              AI‑Enhanced Advertising and Personalization
-            </h2>
+            <h2 className="text-2xl font-semibold">AI‑Enhanced Advertising and Personalization</h2>
             <p className="text-gray-300 leading-relaxed">
               Platforms like Google and Meta auto‑generate ad variations with generative AI, optimizing bids and creatives in real time.
             </p>
@@ -190,9 +168,7 @@ export default function BlogAI2025() {
 
           {/* Section 4 */}
           <section id="industry-use-cases" className="mb-16 space-y-4">
-            <h2 className="text-2xl font-semibold">
-              Industry Spotlights: Generative AI Across Sectors
-            </h2>
+            <h2 className="text-2xl font-semibold">Industry Spotlights: Generative AI Across Sectors</h2>
             <article className="space-y-3">
               <h3 className="text-xl font-medium">E‑commerce &amp; Retail</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -209,7 +185,7 @@ export default function BlogAI2025() {
               <h3 className="text-xl font-medium">Sports &amp; Entertainment</h3>
               <p className="text-gray-300 leading-relaxed">
                 AI automates game recaps, highlight reels, and predictive analytics, keeping fans engaged around the clock.
-              </p>  
+              </p>
             </article>
             <article className="space-y-3">
               <h3 className="text-xl font-medium">Travel &amp; Hospitality</h3>
@@ -227,59 +203,64 @@ export default function BlogAI2025() {
 
           {/* Section 5 */}
           <section id="ethics" className="mb-16 space-y-4">
-            <h2 className="text-2xl font-semibold">
-              Ethical Considerations & the Human Touch
-            </h2>
+            <h2 className="text-2xl font-semibold">Ethical Considerations & the Human Touch</h2>
             <p className="text-gray-300 leading-relaxed">
               AI delivers scale, but human oversight is crucial to preserve brand voice, prevent bias, and ensure originality.
             </p>
           </section>
 
-          {/* Trusted By */}
           <section className="my-16 border-y border-white/10 py-12">
-            <h3 className="text-center text-sm font-semibold mb-8 text-gray-400">
-              Trusted By Industry Leaders
-            </h3>
-            <div className="flex justify-center items-center gap-12 opacity-75">
-              <Image
-                src="/rudy-logo.jpg"
-                alt="Rudy Projec Logo"
-                width={130}
-                height={90}
-                loading="lazy"
-                className="h-8 w-auto"
-              />
-              <Image
-                src="/coca-cola-logo.svg"
-                alt="Coca‑Cola Logo"
-                width={130}
-                height={90}
-                loading="lazy"
-                className="h-8 w-auto"
-              />
-              <Image
-                src="/believe-logo.png"
-                alt="The Believe Resourcing Logo"
-                width={130}
-                height={90}
-                loading="lazy"
-                className="h-8 w-auto"
-              />
-              <Image
-                src="/mercedes-benz-logo2.png"
-                alt="Mercedes Benz Logo"
-                width={130}
-                height={90}
-                loading="lazy"
-                className="h-8 w-auto"
-              />
-            </div>
-          </section>
+  <h3 className="text-center text-sm font-semibold mb-8 text-gray-400">
+    Trusted By Industry Leaders
+  </h3>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div className="justify-self-start transform transition hover:-translate-y-1">
+      <Image
+        src="/rudy-logo.jpg"
+        alt="Rudy Project Logo"
+        width={150}
+        height={60}
+        className="h-10 w-auto"
+        loading="lazy"
+      />
+    </div>
+    <div className="justify-self-center transform transition hover:-translate-y-1">
+      <Image
+        src="/coca-cola-logo.svg"
+        alt="Coca‑Cola Logo"
+        width={150}
+        height={80}
+        className="h-10 w-auto"
+        loading="lazy"
+      />
+    </div>
+    <div className="justify-self-start transform transition hover:-translate-y-1">
+      <Image
+        src="/believe-logo.png"
+        alt="Believe Resourcing Logo"
+        width={150}
+        height={60}
+        className="h-10 w-auto"
+        loading="lazy"
+      />
+    </div>
+    <div className="justify-self-center transform transition hover:-translate-y-1">
+      <Image
+        src="/mercedes-benz-logo2.png"
+        alt="Mercedes Benz Logo"
+        width={150}
+        height={60}
+        className="h-10 w-auto"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
 
           {/* CTA Section */}
           <motion.section
             whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(255,255,255,0.15)' }}
-            className="mt-24 text-center p-12 bg-white/5 rounded-2xl border border-white/10 transition-all duration-300"
+            className="mt-12 text-center p-12 bg-white/5 rounded-2xl border border-white/10 transition-all duration-300"
             id="conclusion"
           >
             <h2 className="text-3xl font-bold mb-6">
@@ -296,8 +277,8 @@ export default function BlogAI2025() {
             </Link>
           </motion.section>
 
-          {/* Grey Divider */}
-          <div className="mx-auto my-12 w-1/2 border-t border-gray-700" />
+          {/* Grey Divider (halved margin) */}
+          <div className="mx-auto my-6 w-1/2 border-t border-gray-700" />
 
         </article>
       </main>
