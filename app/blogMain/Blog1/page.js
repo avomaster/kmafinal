@@ -80,7 +80,7 @@ export default function BlogAI2025() {
               AI‑Powered Marketing in 2025: How Generative AI is Revolutionizing Content & Ads
             </h1>
             <div className="flex items-center text-gray-400 space-x-4 mb-8">
-              <time dateTime="2025-04-21">April 21, 2025</time>
+              <time dateTime="2025-04-21">April 22, 2025</time>
               <span>•</span>
               <span>8 min read</span>
             </div>
